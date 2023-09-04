@@ -32,7 +32,7 @@ num_batches = len(train_dataloader)
 # MODEL            #
 ####################
 
-model = LlamaForCausalLM.from_pretrained(MODEL_PATH, device_map="auto", torch_dtype=torch.bfloat16)
+model = LlamaForCausalLM.from_pretrained(MODEL_PATH, torch_dtype=torch.bfloat16)
 model = accelerator.prepare(model)
 
 ####################

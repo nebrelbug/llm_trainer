@@ -43,7 +43,7 @@ original_dataset = load_from_disk("../datasets/databricks-dolly-15k")["train"]
 dataset = original_dataset.map(data_to_string).remove_columns(original_dataset.column_names)
 
 # filter dataset to exclude examples that are too long
-dataset = dataset.filter(lambda x: len(x["text"]) < 4000)
+dataset = dataset.filter(lambda x: len(x["text"]) < 500)
 
 #####################
 # SPLIT DATA        #
